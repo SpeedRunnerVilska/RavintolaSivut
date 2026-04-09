@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna palautetta | Lapintaika</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8c345;
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: white;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 { color: #0eb3c2; text-align: center; }
+
+        .form-group { margin-bottom: 20px; }
+
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #2c3e50; }
+
+        input[type="text"], input[type="date"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box; 
+            font-family: inherit;
+        }
+
+        .rating-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        button {
+            background: #0bbf5c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        button:hover { background: #a93226; }
+
+        .back-link { display: block; text-align: center; margin-top: 20px; color: #7f8c8d; text-decoration: none; }
+
+        /* Mobiilimuokkauksia lomakkeelle */
+        @media (max-width: 480px) {
+            .rating-grid { grid-template-columns: 1fr; }
+            .form-container { padding: 15px; }
+            h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Miten onnistuimme?</h1>
+        <form action="#">
+            
+            <div class="form-group">
+                <label for="visit-date">Vierailun päivämäärä:</label>
+                <input type="date" id="visit-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="wait-time">Kuinka kauan odotit annostasi?</label>
+                <select id="wait-time">
+                    <option>Alle 15 min</option>
+                    <option>15 - 30 min</option>
+                    <option>Yli 30 min</option>
+                </select>
+            </div>
+
+            <div class="rating-grid">
+                <div class="form-group">
+                    <label>Ruoan maku:</label>
+                    <select><option>Täydellinen</option><option>Herkullinen</option><option>Aika hyvä</option><option>Aika kuiva</option><option>Ihan paha</option></select>
+                </div>
+                <div class="form-group">
+                    <label>Lämpötila:</label>
+                    <select><option>Erinomainen</option><option>Sopiva</option><option>Haalea</option></select>
+                </div>
+                <div class="form-group">
+                    <label>Annoksen ulkonäkö:</label>
+                    <select><option>Kaunis</option><option>Perus</option><option>Sotkuinen</option></select>
+                </div>
+                <div class="form-group">
+                    <label>Hinta-laatusuhde:</label>
+                    <select><option>Loistava</option><option>Hyvä</option><option>Kallis</option></select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Palvelu:</label>
+                <select><option>Mahtavaa</option><option>Kohteliasta</option><option>Hidasta</option></select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">palaute:</label>
+                <textarea id="message" rows="4" placeholder="Kerro meille vapaasti kokemuksestasi..."></textarea>
+            </div>
+
+            <hr>
+            <h3>Yhteydenottopyyntö</h3>
+            <p style="font-size: 0.8rem;">Täytä alle, jos haluat meidän vastaavan palautteeseesi.</p>
+
+            <div class="form-group">
+                <label for="name">Nimi:</label>
+                <input type="text" id="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Sähköposti:</label>
+                <input type="email" id="email">
+            </div>
+
+            <button type="submit">Lähetä palaute</button>
+        </form>
+        
+        <a href="index.html" class="back-link">← Takaisin etusivulle</a>
+    </div>
+
+</body>
+</html>
