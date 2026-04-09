@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lounaslista | Ravintola Lapintaika</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://qul.imgix.net/72775efc-4a23-4428-814e-de50e5d6e4ee/414803_sld.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Quicksand', sans-serif;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .menu-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .day-section { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        h2 { color: #9cb400; border-left: 5px solid #c0392b; padding-left: 10px; }
+
+        .feedback-link {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: #2b46c0;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* --- MOBIILI- JA RESPONSIIVISUUSASETUKSET --- */
+        @media (max-width: 600px) {
+            body {
+                
+                background: #f4f1ea; 
+            }
+            
+            header {
+                padding: 20px;
+                color: #2c3e50;
+            }
+
+            header h1 { font-size: 2rem; }
+
+            .menu-container {
+                margin: 0;
+                border-radius: 0;
+                padding: 20px;
+                box-shadow: none;
+            }
+
+            .price-tag { width: 100%; box-sizing: border-box; }
+        }
+
+        /* Laite vaakatasossa (Landscape) */
+        @media (max-height: 500px) and (orientation: landscape) {
+            header { padding: 10px; }
+            .menu-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 95%; }
+            .day-section { border: none; background: #fff; padding: 10px; border-radius: 10px; }
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ravintola Lapintaika</h1>
+        <div style="background:#2b2dc0; color:white; display:inline-block; padding:10px 20px; border-radius:20px;">Lounas 11,90 €, Sisältää Vettä, Kotikaljaa ja maitoa</div>
+    </header>
+
+    <div class="feedback-link">
+        <a href="palaute.html" class="btn">Anna palautetta kokemuksestasi</a>
+    </div>
+
+    <main class="menu-container">
+        <div class="day-section"><h2>Maanantai</h2><p>Juusto-vihanneskeitto | Paistettu lohi | Marjakiisseli</p></div>
+        <div class="day-section"><h2>Tiistai</h2><p>Kana-fetajustosalaatti | Paistettu punakampela | Pannukakku</p></div>
+        <div class="day-section"><h2>Keskiviikko</h2><p>Tomaatti-yrttikeitto | Kalkkunaleike BBQ | Omenapiirakka</p></div>
+        <div class="day-section"><h2>Torstai</h2><p>Rapukeitto | Poronkäristys | Hedelmäsalaatti</p></div>
+        <div class="day-section"><h2>Perjantai</h2><p>Savulohisalaatti | Naudan paahtopaisti | Suklaamousse</p></div>
+    </main>
+
+    <footer>
+        <p>Ravintola Lapintaika, Ravintolakatu 2, 98765 LAPINMAA</p>
+        <p>ma - pe, 10:30 - 15:00</p>
+    </footer>
+
+</body>
+</html>
